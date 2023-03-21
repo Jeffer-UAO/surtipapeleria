@@ -1,0 +1,26 @@
+.container {
+}
+
+.topBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: (#074699);
+  > a {
+    > img {
+      height: 50px;
+    }
+
+    > svg {
+      color: white;
+    }
+  }
+}
+
+.children {
+  padding-top: 100px;
+}
