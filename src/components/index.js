@@ -8,3 +8,4 @@ export * from "./ListProducts";
 export * from "./DetailProduct";
 export * from "./Layout";
 export * from "./Auth";
+export * from "./Menu";

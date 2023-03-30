@@ -12,7 +12,7 @@ export default function ProductPage(props) {
       <BasicLayout>
         <Advertisement />
       </BasicLayout>
-      
+
       <DetailProduct product={product} relate={relate} />
 
       <Footer />

@@ -4,6 +4,8 @@ import { TopBar } from "../../components"
 
 
 export function BasicLayout(props) {
+
+  
   const {
     children,
     isOpenSearch = false,

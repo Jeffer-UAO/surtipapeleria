@@ -1,0 +1,19 @@
+.menu {
+  background-color: teal;
+  padding-top: 70px;
+}
+
+.body {
+  .headerPage {
+    padding: 10px;
+    background-color: aqua;
+    display: flex;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+  }
+  .item {
+    align-items: center;
+    text-align: center;
+  }
+}

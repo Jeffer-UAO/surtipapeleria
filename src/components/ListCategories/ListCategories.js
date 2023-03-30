@@ -1,12 +1,16 @@
 import React from "react";
 import { CardBody, CardImg, CardTitle } from "reactstrap";
 import { map } from "lodash";
+import { BASE_NAME } from "@/config/constants";
 
 import styles from "./ListCategories.module.scss";
 import Link from "next/link";
 
 export function ListCategories(props) {
   const { categories } = props;
+
+
+  console.log(categories);
 
   const goToCategory = (id) => {
     console.log(id);
@@ -21,7 +25,7 @@ export function ListCategories(props) {
           className={styles.list__category}         
          
         >
-          <CardImg alt="Card image cap" src={category.image} />
+          <CardImg alt="Card image cap" src={BASE_NAME + category.image } />
 
           <div className={styles.category}
           >

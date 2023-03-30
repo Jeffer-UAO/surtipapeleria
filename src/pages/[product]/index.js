@@ -11,13 +11,15 @@ export async function getServerSideProps(context) {
   const responseProduct = await productCtrl.getProductBySlug(product);
 
   const responseProductRelate = await productCtrl.getProductByName(
-    responseProduct[0].name
+    responseProduct[0]?.name
   );
 
-  return {
-    props: {
-      product: responseProduct,
-      relate: responseProductRelate,
-    },
-  };
+ 
+    return {
+      props: {
+        product: responseProduct,
+        relate: responseProductRelate,
+      },
+    };
+ 
 }
