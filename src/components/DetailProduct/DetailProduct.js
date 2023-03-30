@@ -9,18 +9,18 @@ export function DetailProduct(props) {
   const { product, relate } = props;
 
   useEffect(() => {
-    setProductData(product[0]);
+    setProductData(product);
   }, []);
 
   const changeDetail = (data) => {
     setProductData(data);
   };
 
-  if (product[0]) {
+  if (product) {
     return (
       <div className={styles.detailProduct}>
         <div className={styles.product}>
-          <CardImg alt="Card image cap" src={producFtData.images} />
+          <CardImg alt="Card image cap" src={productData.images} />
 
           <CardTitle className={styles.title}>
             <h5>

@@ -1,4 +1,3 @@
-import { size } from "lodash";
 import { BasicLayout } from "@/layouts";
 import { Advertisement } from "@/components";
 import { DetailProduct } from "@/components";
