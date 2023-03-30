@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { map } from "lodash";
+import { BASE_NAME } from "@/config/constants";
 
 import { CardBody, CardImg, CardTitle } from "reactstrap";
 import styles from "./DetailProduct.module.scss";
@@ -20,7 +21,7 @@ export function DetailProduct(props) {
     return (
       <div className={styles.detailProduct}>
         <div className={styles.product}>
-          <CardImg alt="Card image cap" src={productData.images} />
+          <CardImg alt="Card image cap" src={BASE_NAME + productData.images} />
 
           <CardTitle className={styles.title}>
             <h5>
@@ -40,7 +41,7 @@ export function DetailProduct(props) {
                 className={styles.list__product}
                 onClick={() => changeDetail(product)}
               >
-                <CardImg alt="Card image cap" src={product.images} />
+                <CardImg alt="Card image cap" src={BASE_NAME + product.images} />
 
                 <div className={styles.product}>
                   <CardTitle className={styles.title}>

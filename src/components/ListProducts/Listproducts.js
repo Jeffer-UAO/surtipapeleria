@@ -1,6 +1,7 @@
 import React from "react";
 import { CardBody, CardImg, CardTitle } from "reactstrap";
 import { map } from "lodash";
+import { BASE_NAME } from "@/config/constants";
 
 import styles from "./ListProduts.module.scss";
 import Link from "next/link";
@@ -22,7 +23,7 @@ export function Listproducts(props) {
             href={`/${product.productData.slug}`}
             className={styles.list__product}
           >
-            <CardImg alt="Card image cap" src={product.productData.images} />
+            <CardImg alt="Card image cap" src={BASE_NAME + product.productData.images} />
 
             <div className={styles.product}>
               <CardTitle className={styles.title}>
