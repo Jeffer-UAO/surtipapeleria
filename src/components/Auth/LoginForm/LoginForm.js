@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
-import { Auth } from "@/api/Auth";
+import { Auth } from "@/api/auth";
 import { useAuth } from "@/hooks/useAuth";
 
 import { initialValues, validationSchema } from "./LoginForm.form";
@@ -10,9 +10,8 @@ import { initialValues, validationSchema } from "./LoginForm.form";
 import styles from "./LoginForm.module.scss";
 
 export function LoginForm() {
-   const authCtrl = new Auth();
-   const { login } = useAuth();
-
+  const authCtrl = new Auth();
+  const { login } = useAuth();
 
   const formik = useFormik({
     initialValues: initialValues(),
@@ -22,8 +21,8 @@ export function LoginForm() {
     onSubmit: async (formValue) => {
       try {
         const response = await authCtrl.login(formValue);
-        login(response.access)
-    
+        login(response.access);
+
         // history.push(`/`);
       } catch (error) {
         toast.error(error.message);

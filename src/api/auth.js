@@ -1,8 +1,8 @@
 import { BASE_API } from "../config/constants";
 
 export class Auth {
-  async login(data) {
 
+  async login(data) {
     try {
       const url = `${BASE_API}/api/auth/login/`;
       const params = {
