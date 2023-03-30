@@ -10,7 +10,7 @@ export function DetailProduct(props) {
   const { product, relate } = props;
 
   useEffect(() => {
-    setProductData(product);
+    setProductData(product[0]);
   }, []);
 
   const changeDetail = (data) => {
