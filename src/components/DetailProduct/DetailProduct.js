@@ -27,11 +27,14 @@ export function DetailProduct(props) {
             <h5>
               {productData.name} {productData.name_extend}
             </h5>
-            <h6>$ {productData.price1}</h6>
+            {productData.price1 !== null &&    <h6>$ {productData.price1}</h6> }
+         
           </CardTitle>
+         
         </div>
-
+        
         <div className={styles.relate}>
+        <hr/>
           <p>PRODUCTOS RELACIONADOS</p>
 
           <div className={styles.list}>
@@ -48,7 +51,8 @@ export function DetailProduct(props) {
                     <h5>
                       {product.name} {product.name_extend}
                     </h5>
-                    <h6>$ {product.price1}</h6>
+                    {productData.price1 !== null &&   <h6>$ {product.price1}</h6> }
+                  
                   </CardTitle>
                 </div>
               </div>

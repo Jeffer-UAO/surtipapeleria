@@ -10,32 +10,45 @@ export function ListCategories(props) {
   const { categories } = props;
 
 
-  console.log(categories);
-
   const goToCategory = (id) => {
     console.log(id);
   };
 
   return (
-    <div className={styles.list} >
-      {map(categories, (category) => (
-        <Link
-          key={category.id}
-          href={`/products/${category.slug}`}
-          className={styles.list__category}         
-         
-        >
-          <CardImg alt="Card image cap" src={BASE_NAME + category.image } />
 
-          <div className={styles.category}
+    <div>
+      <div className={styles.header}>
+      <h5>CATÁLOGO 2023</h5>
+    
+      </div>
+
+
+<div className={styles.content}>
+
+
+      <h1>Categorías</h1>
+      
+      <div className={styles.list} >
+        {map(categories, (category) => (
+          <Link
+            key={category.id}
+            href={`/products/${category.slug}`}
+            className={styles.list__category}         
+           
           >
-            <CardTitle className={styles.title}>
-              <h1 >{category.name}</h1>
-              <h6 >ver más</h6>
-            </CardTitle>
-          </div>
-        </Link>
-      ))}
+            <CardImg alt="Card image cap" src={BASE_NAME + category.image } />
+  
+            <div className={styles.category}
+            >
+              <CardTitle className={styles.title}>
+                <h1 >{category.name}</h1>
+                <h6 >ver más</h6>
+              </CardTitle>
+            </div>
+          </Link>
+        ))}
     </div>
+    </div>
+</div>
   );
 }

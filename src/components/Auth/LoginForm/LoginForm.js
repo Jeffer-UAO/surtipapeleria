@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { Auth } from "@/api/auth";
 import { useAuth } from "@/hooks/useAuth";
+import { FaUserCircle } from "react-icons/fa";
 
 import { initialValues, validationSchema } from "./LoginForm.form";
 
@@ -32,6 +33,9 @@ export function LoginForm() {
 
   return (
     <div className={styles.loginForm}>
+      <div className={styles.logo}>
+        <FaUserCircle />
+      </div>
       <Form onSubmit={formik.handleSubmit}>
         <FormGroup floating>
           <Input

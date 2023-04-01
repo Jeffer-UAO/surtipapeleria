@@ -9,3 +9,6 @@ export * from "./DetailProduct";
 export * from "./Layout";
 export * from "./Auth";
 export * from "./Menu";
+export * from "./AboutUs";
+export * from "./Retails";
+export * from "./WhatsApp";
