@@ -4,7 +4,7 @@
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 
   img {
-    max-height: 60vh;
+    max-height: 80vh;
     object-fit: cover;
     object-position: center center;
   }
@@ -21,10 +21,8 @@
   .relate {
     padding: 20px;
     p {
-  
-      margin-top: 50px;    
+      margin-top: 50px;
       font-size: 1.2rem;
-
     }
   }
 }
@@ -50,7 +48,6 @@
       object-position: center center;
     }
 
-    
     h5 {
       font-size: 14px;
       font-weight: 400;

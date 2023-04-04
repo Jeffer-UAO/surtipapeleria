@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { map } from "lodash";
 import { BASE_NAME } from "@/config/constants";
 
-import { CardBody, CardImg, CardTitle } from "reactstrap";
+import { CardImg, CardTitle } from "reactstrap";
 import styles from "./DetailProduct.module.scss";
 
 export function DetailProduct(props) {
@@ -27,14 +27,11 @@ export function DetailProduct(props) {
             <h5>
               {productData.name} {productData.name_extend}
             </h5>
-            {productData.price1 !== null &&    <h6>$ {productData.price1}</h6> }
-         
+            {productData.price1 !== null && <h6>$ {productData.price1}</h6>}
           </CardTitle>
-         
         </div>
-        
+
         <div className={styles.relate}>
-        <hr/>
           <p>PRODUCTOS RELACIONADOS</p>
 
           <div className={styles.list}>
@@ -44,15 +41,17 @@ export function DetailProduct(props) {
                 className={styles.list__product}
                 onClick={() => changeDetail(product)}
               >
-                <CardImg alt="Card image cap" src={BASE_NAME + product.images} />
+                <CardImg
+                  alt="Card image cap"
+                  src={BASE_NAME + product.images}
+                />
 
                 <div className={styles.product}>
                   <CardTitle className={styles.title}>
                     <h5>
                       {product.name} {product.name_extend}
                     </h5>
-                    {productData.price1 !== null &&   <h6>$ {product.price1}</h6> }
-                  
+                    {productData.price1 !== null && <h6>$ {product.price1}</h6>}
                   </CardTitle>
                 </div>
               </div>
@@ -61,10 +60,7 @@ export function DetailProduct(props) {
         </div>
       </div>
     );
-  }else{
-    return (
-
-      <h5> La pagina no existe</h5>
-    )
+  } else {
+    return <h5> La pagina no existe</h5>;
   }
 }

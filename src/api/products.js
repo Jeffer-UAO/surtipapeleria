@@ -52,9 +52,9 @@ export class Products {
     }
   }
 
-  async getProductByName(name){
+  async getProductByName(flag){
     try {    
-      const productFilter = `name=${name}`;
+      const productFilter = `flag=${flag}`;
   
       const url = `${BASE_API}/api/products/?${productFilter}`;
       const response = await fetch(url);

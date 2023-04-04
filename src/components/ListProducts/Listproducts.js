@@ -29,7 +29,6 @@ export function Listproducts(props) {
                 <div className={styles.product}>
                   <CardTitle className={styles.title}>
                     <h5>
-                      {product.productData.name}{" "}
                       {product.productData.name_extend}
                     </h5>
 
@@ -46,14 +45,12 @@ export function Listproducts(props) {
                 phoneNumber="+573103900666"
                 message={
                   BASE_NAME +
-                  product.productData.images +
-                  " " +
-                  product.productData.name +
+                  product.productData.images +                  
                   " " +
                   product.productData.name_extend +
                   " " +
                   "Referencia: " +
-                  product.productData.codigo
+                  product.productData.ref
                 }
               />
             </div>
