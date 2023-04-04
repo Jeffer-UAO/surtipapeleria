@@ -20,6 +20,8 @@ export class Products {
 
 
   async getProductsByCategory(idCategory){
+    console.log("error error error error");
+    console.log(idCategory);
     try {    
       const productsFilter = `category=${idCategory}`;
   
@@ -37,6 +39,7 @@ export class Products {
 
 
   async getProductBySlug(slug){
+
     try {    
       const productFilter = `slug=${slug}`;
   

@@ -8,7 +8,8 @@ export class Categories {
     try {
       const url = `${BASE_API}/api/category/`;           
       const response = await fetch(url);    
-      const result = await response.json();          
+      const result = await response.json(); 
+   
       if (response.status !==200 ) throw result;     
       return result;
     } catch (error) {     
@@ -18,7 +19,7 @@ export class Categories {
  
 
    async getBySlug(slug) {
-    
+
     try {
       const slugFilter = `slug=${slug}`;
       const url = `${BASE_API}/api/category/?${slugFilter}`;
@@ -30,7 +31,7 @@ export class Categories {
       return result[0];
     } catch (error) {
       console.error(error);
-      alert("Ha ocurrido un error al obtener los datos. Por favor, inténtalo de nuevo más tarde.");
+      console.log("Ha ocurrido un error al obtener los datos. Por favor, inténtalo de nuevo más tarde.");
       
     }
   }
